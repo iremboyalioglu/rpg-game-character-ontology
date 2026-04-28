@@ -155,6 +155,7 @@ rpg-game-character-ontology/
 │   └── rpg-game-character-shapes.ttl
 └── validation/
     └── shacl-play-instructions.md
+    └── syntax-check.md
 ```
 
 ## Current Progress
