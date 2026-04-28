@@ -1,0 +1,79 @@
+# SPARQL Queries for Competency Questions
+# Prefix used by the RPG Game Character Ontology
+
+PREFIX rpg: <http://example.org/rpg-game-character-ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+# CQ1: Which class does a character belong to?
+SELECT ?character ?class WHERE {
+  ?character rpg:hasClass ?class .
+}
+
+# CQ2: Which race does a character have?
+SELECT ?character ?race WHERE {
+  ?character rpg:hasRace ?race .
+}
+
+# CQ3: Which skills does a character have?
+SELECT ?character ?skill WHERE {
+  ?character rpg:hasSkill ?skill .
+}
+
+# CQ4: Which weapon is used by a character?
+SELECT ?character ?weapon WHERE {
+  ?character rpg:usesWeapon ?weapon .
+}
+
+# CQ5: Which armor is worn by a character?
+SELECT ?character ?armor WHERE {
+  ?character rpg:wearsArmor ?armor .
+}
+
+# CQ6: Which NPC gives a specific quest?
+SELECT ?npc ?quest WHERE {
+  ?npc rdf:type rpg:NonPlayerCharacter ;
+       rpg:givesQuest ?quest .
+}
+
+# CQ7: Which characters participate in a specific quest?
+SELECT ?character ?quest WHERE {
+  ?character rpg:participatesInQuest ?quest .
+}
+
+# CQ8: Which enemies are located in a specific location?
+SELECT ?enemy ?location WHERE {
+  ?enemy rdf:type rpg:Enemy ;
+         rpg:locatedIn ?location .
+}
+
+# CQ9: Which characters belong to the same faction?
+SELECT ?character ?faction WHERE {
+  ?character rpg:belongsToFaction ?faction .
+}
+ORDER BY ?faction
+
+# CQ10: Which boss enemy appears in a certain location?
+SELECT ?boss ?location WHERE {
+  ?boss rdf:type rpg:BossEnemy ;
+        rpg:locatedIn ?location .
+}
+
+# CQ11: Which characters are allies of each other?
+SELECT ?character ?ally WHERE {
+  ?character rpg:allyOf ?ally .
+}
+
+# CQ12: Which characters are enemies of each other?
+SELECT ?character ?enemy WHERE {
+  ?character rpg:enemyOf ?enemy .
+}
+
+# CQ13: Which skill is required for a quest?
+SELECT ?quest ?skill WHERE {
+  ?quest rpg:requiresSkill ?skill .
+}
+
+# CQ14: Which item is rewarded by a quest?
+SELECT ?quest ?item WHERE {
+  ?quest rpg:rewardsItem ?item .
+}

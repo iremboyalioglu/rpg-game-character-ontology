@@ -1,0 +1,112 @@
+@prefix rpg: <http://example.org/rpg-game-character-ontology#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# Initial SHACL Shapes for RPG Game Character Ontology
+#################################################################
+
+rpg:GameCharacterShape
+    a sh:NodeShape ;
+    sh:targetClass rpg:PlayerCharacter, rpg:NonPlayerCharacter, rpg:Enemy, rpg:BossEnemy ;
+    sh:property [
+        sh:path rpg:characterName ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Every game character should have a character name." ;
+        sh:severity sh:Violation
+    ] ;
+    sh:property [
+        sh:path rpg:level ;
+        sh:minCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 1 ;
+        sh:message "Every game character should have a level value greater than or equal to 1." ;
+        sh:severity sh:Violation
+    ] ;
+    sh:property [
+        sh:path rpg:hasRace ;
+        sh:minCount 1 ;
+        sh:class rpg:Race ;
+        sh:message "Every game character should have at least one race." ;
+        sh:severity sh:Violation
+    ] ;
+    sh:property [
+        sh:path rpg:locatedIn ;
+        sh:minCount 1 ;
+        sh:class rpg:Location ;
+        sh:message "Every game character should be located in at least one location." ;
+        sh:severity sh:Warning
+    ] .
+
+rpg:PlayerCharacterShape
+    a sh:NodeShape ;
+    sh:targetClass rpg:PlayerCharacter ;
+    sh:property [
+        sh:path rpg:hasClass ;
+        sh:minCount 1 ;
+        sh:class rpg:CharacterClass ;
+        sh:message "Every player character should have a character class." ;
+        sh:severity sh:Violation
+    ] ;
+    sh:property [
+        sh:path rpg:hasSkill ;
+        sh:minCount 1 ;
+        sh:class rpg:Skill ;
+        sh:message "Every player character should have at least one skill." ;
+        sh:severity sh:Violation
+    ] ;
+    sh:property [
+        sh:path rpg:participatesInQuest ;
+        sh:minCount 1 ;
+        sh:class rpg:Quest ;
+        sh:message "Every player character should participate in at least one quest in the sample data." ;
+        sh:severity sh:Warning
+    ] .
+
+rpg:NonPlayerCharacterShape
+    a sh:NodeShape ;
+    sh:targetClass rpg:NonPlayerCharacter ;
+    sh:property [
+        sh:path rpg:givesQuest ;
+        sh:minCount 1 ;
+        sh:class rpg:Quest ;
+        sh:message "Every NPC in this sample ontology should give at least one quest." ;
+        sh:severity sh:Warning
+    ] .
+
+rpg:EnemyShape
+    a sh:NodeShape ;
+    sh:targetClass rpg:Enemy, rpg:BossEnemy ;
+    sh:property [
+        sh:path rpg:enemyOf ;
+        sh:minCount 1 ;
+        sh:class rpg:GameCharacter ;
+        sh:message "Every enemy should be connected to at least one opposing character." ;
+        sh:severity sh:Warning
+    ] .
+
+rpg:QuestShape
+    a sh:NodeShape ;
+    sh:targetClass rpg:Quest ;
+    sh:property [
+        sh:path rpg:questTitle ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Every quest should have a quest title." ;
+        sh:severity sh:Violation
+    ] ;
+    sh:property [
+        sh:path rpg:requiresSkill ;
+        sh:minCount 1 ;
+        sh:class rpg:Skill ;
+        sh:message "Every quest should require at least one skill in this sample ontology." ;
+        sh:severity sh:Warning
+    ] ;
+    sh:property [
+        sh:path rpg:rewardsItem ;
+        sh:minCount 1 ;
+        sh:class rpg:Item ;
+        sh:message "Every quest should reward at least one item in this sample ontology." ;
+        sh:severity sh:Warning
+    ] .
