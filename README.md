@@ -146,7 +146,6 @@ rpg-game-character-ontology/
 │   ├── ORSD-draft.docx
 │   ├── ORSD-draft.md
 │   ├── design-decisions.md
-│   └── what-is-done-and-next-steps.md
 ├── examples/
 │   └── sample-competency-questions.md
 ├── queries/
