@@ -1,0 +1,1412 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/rpg-game-character-ontology#"
+     xml:base="http://example.org/rpg-game-character-ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:rpg-game-character-ontology="http://example.org/rpg-game-character-ontology#">
+    <owl:Ontology rdf:about="http://example.org/rpg-game-character-ontology#">
+        <terms:creator>Yunus Erdem Ocak</terms:creator>
+        <terms:creator>İrem Boyalıoğlu</terms:creator>
+        <terms:description xml:lang="en">An OWL/RDF ontology for a small-scale RPG game character and quest knowledge graph, extended in v2 with data acquisition, player behavior events, and recommendation-oriented concepts.</terms:description>
+        <terms:title xml:lang="en">RPG Game Character Ontology</terms:title>
+        <vann:preferredNamespacePrefix>rpg</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://example.org/rpg-game-character-ontology#</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">Version 2 of a small-scale ontology for modeling RPG game characters, quests, items, locations, player behavior events, play styles, and simple recommendations.</rdfs:comment>
+        <rdfs:label xml:lang="en">RPG Game Character Ontology</rdfs:label>
+        <owl:versionInfo>2.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#allyOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#allyOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#GameCharacter"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#GameCharacter"/>
+        <rdfs:comment xml:lang="en">Relates two game characters that are allies.</rdfs:comment>
+        <rdfs:label xml:lang="en">ally of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#belongsToFaction -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#belongsToFaction">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#GameCharacter"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#Faction"/>
+        <rdfs:comment xml:lang="en">Relates a game character to a faction.</rdfs:comment>
+        <rdfs:label xml:lang="en">belongs to faction</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#completedQuest -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#completedQuest">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#QuestCompletion"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#Quest"/>
+        <rdfs:comment xml:lang="en">Relates a quest completion event to the completed quest.</rdfs:comment>
+        <rdfs:label xml:lang="en">completed quest</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#controlsCharacter -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#controlsCharacter">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#Player"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#PlayerCharacter"/>
+        <rdfs:comment xml:lang="en">Relates a player profile to the player character controlled by that player.</rdfs:comment>
+        <rdfs:label xml:lang="en">controls character</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#enemyOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#enemyOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#GameCharacter"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#GameCharacter"/>
+        <rdfs:comment xml:lang="en">Relates two game characters that are enemies.</rdfs:comment>
+        <rdfs:label xml:lang="en">enemy of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#eventForCharacter -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#eventForCharacter">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#GameplayEvent"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#GameCharacter"/>
+        <rdfs:comment xml:lang="en">Relates a gameplay event to the character involved in that event.</rdfs:comment>
+        <rdfs:label xml:lang="en">event for character</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#eventRelatedQuest -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#eventRelatedQuest">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#GameplayEvent"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#Quest"/>
+        <rdfs:comment xml:lang="en">Relates a gameplay event to the quest involved in the event.</rdfs:comment>
+        <rdfs:label xml:lang="en">event related quest</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#eventUsesSkill -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#eventUsesSkill">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#SkillUsage"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#Skill"/>
+        <rdfs:comment xml:lang="en">Relates a skill usage event to the skill used.</rdfs:comment>
+        <rdfs:label xml:lang="en">event uses skill</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#givesQuest -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#givesQuest">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#NonPlayerCharacter"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#Quest"/>
+        <rdfs:comment xml:lang="en">Relates an NPC to a quest that the NPC gives.</rdfs:comment>
+        <rdfs:label xml:lang="en">gives quest</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#hasClass -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#hasClass">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#GameCharacter"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#CharacterClass"/>
+        <rdfs:comment xml:lang="en">Relates a game character to a character class.</rdfs:comment>
+        <rdfs:label xml:lang="en">has class</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#hasPlayStyle -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#hasPlayStyle">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#Player"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#PlayStyle"/>
+        <rdfs:comment xml:lang="en">Relates a player to a high-level play style category.</rdfs:comment>
+        <rdfs:label xml:lang="en">has play style</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#hasRace -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#hasRace">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#GameCharacter"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#Race"/>
+        <rdfs:comment xml:lang="en">Relates a game character to a race.</rdfs:comment>
+        <rdfs:label xml:lang="en">has race</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#hasSkill -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#hasSkill">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#GameCharacter"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#Skill"/>
+        <rdfs:comment xml:lang="en">Relates a game character to a skill.</rdfs:comment>
+        <rdfs:label xml:lang="en">has skill</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#locatedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#locatedIn">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#GameEntity"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#Location"/>
+        <rdfs:comment xml:lang="en">Relates a game entity to a location.</rdfs:comment>
+        <rdfs:label xml:lang="en">located in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#participatesInQuest -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#participatesInQuest">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#GameCharacter"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#Quest"/>
+        <rdfs:comment xml:lang="en">Relates a character to a quest in which the character participates.</rdfs:comment>
+        <rdfs:label xml:lang="en">participates in quest</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#performsEvent -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#performsEvent">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#Player"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#GameplayEvent"/>
+        <rdfs:comment xml:lang="en">Relates a player to a gameplay event performed by that player.</rdfs:comment>
+        <rdfs:label xml:lang="en">performs event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#recommendationForPlayer -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#recommendationForPlayer">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#Recommendation"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#Player"/>
+        <rdfs:comment xml:lang="en">Relates a recommendation to the player for whom it was generated.</rdfs:comment>
+        <rdfs:label xml:lang="en">recommendation for player</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#recommendedQuest -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#recommendedQuest">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#Recommendation"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#Quest"/>
+        <rdfs:comment xml:lang="en">Relates a recommendation to a suggested quest.</rdfs:comment>
+        <rdfs:label xml:lang="en">recommended quest</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#recommendedSkill -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#recommendedSkill">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#Recommendation"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#Skill"/>
+        <rdfs:comment xml:lang="en">Relates a recommendation to a suggested skill.</rdfs:comment>
+        <rdfs:label xml:lang="en">recommended skill</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#requiresSkill -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#requiresSkill">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#Quest"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#Skill"/>
+        <rdfs:comment xml:lang="en">Relates a quest to a skill required for completing it.</rdfs:comment>
+        <rdfs:label xml:lang="en">requires skill</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#rewardsItem -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#rewardsItem">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#Quest"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#Item"/>
+        <rdfs:comment xml:lang="en">Relates a quest to an item rewarded after completion.</rdfs:comment>
+        <rdfs:label xml:lang="en">rewards item</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#usesWeapon -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#usesWeapon">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#GameCharacter"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#Weapon"/>
+        <rdfs:comment xml:lang="en">Relates a game character to a weapon used by that character.</rdfs:comment>
+        <rdfs:label xml:lang="en">uses weapon</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#wearsArmor -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/rpg-game-character-ontology#wearsArmor">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#GameCharacter"/>
+        <rdfs:range rdf:resource="http://example.org/rpg-game-character-ontology#Armor"/>
+        <rdfs:comment xml:lang="en">Relates a game character to armor worn by that character.</rdfs:comment>
+        <rdfs:label xml:lang="en">wears armor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#characterName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/rpg-game-character-ontology#characterName">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#GameCharacter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Textual display name of a character.</rdfs:comment>
+        <rdfs:label xml:lang="en">character name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#completionStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/rpg-game-character-ontology#completionStatus">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#QuestCompletion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Completion state of a quest event.</rdfs:comment>
+        <rdfs:label xml:lang="en">completion status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#eventCount -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/rpg-game-character-ontology#eventCount">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#GameplayEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Number of times a repeated gameplay behavior occurred in the sample data.</rdfs:comment>
+        <rdfs:label xml:lang="en">event count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#eventTimestamp -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/rpg-game-character-ontology#eventTimestamp">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#GameplayEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Timestamp of a gameplay event.</rdfs:comment>
+        <rdfs:label xml:lang="en">event timestamp</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#itemName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/rpg-game-character-ontology#itemName">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#Item"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Textual display name of an item.</rdfs:comment>
+        <rdfs:label xml:lang="en">item name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#level -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/rpg-game-character-ontology#level">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#GameCharacter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Numeric level of a game character.</rdfs:comment>
+        <rdfs:label xml:lang="en">level</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#locationName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/rpg-game-character-ontology#locationName">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Textual display name of a location.</rdfs:comment>
+        <rdfs:label xml:lang="en">location name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#playerName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/rpg-game-character-ontology#playerName">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#Player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Textual display name of a player profile.</rdfs:comment>
+        <rdfs:label xml:lang="en">player name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#preferenceScore -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/rpg-game-character-ontology#preferenceScore">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#Recommendation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Simple score used to rank a recommendation in the sample knowledge graph.</rdfs:comment>
+        <rdfs:label xml:lang="en">preference score</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#questTitle -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/rpg-game-character-ontology#questTitle">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#Quest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Textual title of a quest.</rdfs:comment>
+        <rdfs:label xml:lang="en">quest title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#recommendationReason -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/rpg-game-character-ontology#recommendationReason">
+        <rdfs:domain rdf:resource="http://example.org/rpg-game-character-ontology#Recommendation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Textual explanation for why a recommendation was generated.</rdfs:comment>
+        <rdfs:label xml:lang="en">recommendation reason</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Armor -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#Armor">
+        <rdfs:subClassOf rdf:resource="http://example.org/rpg-game-character-ontology#Equipment"/>
+        <rdfs:comment xml:lang="en">Equipment used by a character for protection.</rdfs:comment>
+        <rdfs:label xml:lang="en">Armor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#BossEnemy -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#BossEnemy">
+        <rdfs:subClassOf rdf:resource="http://example.org/rpg-game-character-ontology#Enemy"/>
+        <rdfs:comment xml:lang="en">A powerful enemy usually associated with an important challenge.</rdfs:comment>
+        <rdfs:label xml:lang="en">Boss Enemy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#CharacterClass -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#CharacterClass">
+        <rdfs:subClassOf rdf:resource="http://example.org/rpg-game-character-ontology#GameEntity"/>
+        <rdfs:comment xml:lang="en">A role or profession of a character, such as Warrior, Mage, Ranger, or Sage.</rdfs:comment>
+        <rdfs:label xml:lang="en">Character Class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#CharacterProgression -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#CharacterProgression">
+        <rdfs:comment xml:lang="en">A representation of character development over time, such as level growth or repeated skill usage.</rdfs:comment>
+        <rdfs:label xml:lang="en">Character Progression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#ConsumableItem -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#ConsumableItem">
+        <rdfs:subClassOf rdf:resource="http://example.org/rpg-game-character-ontology#Item"/>
+        <rdfs:comment xml:lang="en">An item that can be consumed by a character.</rdfs:comment>
+        <rdfs:label xml:lang="en">Consumable Item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Enemy -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#Enemy">
+        <rdfs:subClassOf rdf:resource="http://example.org/rpg-game-character-ontology#GameCharacter"/>
+        <rdfs:comment xml:lang="en">A hostile character that can oppose player characters.</rdfs:comment>
+        <rdfs:label xml:lang="en">Enemy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Equipment -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#Equipment">
+        <rdfs:subClassOf rdf:resource="http://example.org/rpg-game-character-ontology#GameEntity"/>
+        <rdfs:comment xml:lang="en">An item that can be equipped by a character.</rdfs:comment>
+        <rdfs:label xml:lang="en">Equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Faction -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#Faction">
+        <rdfs:subClassOf rdf:resource="http://example.org/rpg-game-character-ontology#GameEntity"/>
+        <rdfs:comment xml:lang="en">A group or organization that characters may belong to.</rdfs:comment>
+        <rdfs:label xml:lang="en">Faction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#GameCharacter -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#GameCharacter">
+        <rdfs:subClassOf rdf:resource="http://example.org/rpg-game-character-ontology#GameEntity"/>
+        <rdfs:comment xml:lang="en">A character entity in the game world.</rdfs:comment>
+        <rdfs:label xml:lang="en">Game Character</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#GameEntity -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#GameEntity">
+        <rdfs:comment xml:lang="en">A general entity that exists in the RPG game world.</rdfs:comment>
+        <rdfs:label xml:lang="en">Game Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#GameplayEvent -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#GameplayEvent">
+        <rdfs:comment xml:lang="en">An event generated by player activity, such as completing a quest or using a skill.</rdfs:comment>
+        <rdfs:label xml:lang="en">Gameplay Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Item -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#Item">
+        <rdfs:subClassOf rdf:resource="http://example.org/rpg-game-character-ontology#GameEntity"/>
+        <rdfs:comment xml:lang="en">A general object in the game world.</rdfs:comment>
+        <rdfs:label xml:lang="en">Item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Location -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#Location">
+        <rdfs:subClassOf rdf:resource="http://example.org/rpg-game-character-ontology#GameEntity"/>
+        <rdfs:comment xml:lang="en">A place or area in the game world.</rdfs:comment>
+        <rdfs:label xml:lang="en">Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#NonPlayerCharacter -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#NonPlayerCharacter">
+        <rdfs:subClassOf rdf:resource="http://example.org/rpg-game-character-ontology#GameCharacter"/>
+        <rdfs:comment xml:lang="en">A character controlled by the game system.</rdfs:comment>
+        <rdfs:label xml:lang="en">Non-Player Character</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#PlayStyle -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#PlayStyle">
+        <rdfs:comment xml:lang="en">A high-level behavioral category inferred from player activity, such as Explorer, CombatFocused, or QuestOriented.</rdfs:comment>
+        <rdfs:label xml:lang="en">Play Style</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Player -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#Player">
+        <rdfs:comment xml:lang="en">A human user or player profile that controls one or more player characters.</rdfs:comment>
+        <rdfs:label xml:lang="en">Player</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#PlayerCharacter -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#PlayerCharacter">
+        <rdfs:subClassOf rdf:resource="http://example.org/rpg-game-character-ontology#GameCharacter"/>
+        <rdfs:comment xml:lang="en">A character controlled by the player.</rdfs:comment>
+        <rdfs:label xml:lang="en">Player Character</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Quest -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#Quest">
+        <rdfs:subClassOf rdf:resource="http://example.org/rpg-game-character-ontology#GameEntity"/>
+        <rdfs:comment xml:lang="en">A mission or task in the game world.</rdfs:comment>
+        <rdfs:label xml:lang="en">Quest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#QuestCompletion -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#QuestCompletion">
+        <rdfs:subClassOf rdf:resource="http://example.org/rpg-game-character-ontology#GameplayEvent"/>
+        <rdfs:comment xml:lang="en">A gameplay event representing the completion of a quest.</rdfs:comment>
+        <rdfs:label xml:lang="en">Quest Completion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Race -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#Race">
+        <rdfs:subClassOf rdf:resource="http://example.org/rpg-game-character-ontology#GameEntity"/>
+        <rdfs:comment xml:lang="en">The species or ancestry of a character.</rdfs:comment>
+        <rdfs:label xml:lang="en">Race</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Recommendation -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#Recommendation">
+        <rdfs:comment xml:lang="en">A suggested quest, skill, or item generated from ontology-based player and character information.</rdfs:comment>
+        <rdfs:label xml:lang="en">Recommendation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Skill -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#Skill">
+        <rdfs:subClassOf rdf:resource="http://example.org/rpg-game-character-ontology#GameEntity"/>
+        <rdfs:comment xml:lang="en">An ability that can be used by a character.</rdfs:comment>
+        <rdfs:label xml:lang="en">Skill</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#SkillUsage -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#SkillUsage">
+        <rdfs:subClassOf rdf:resource="http://example.org/rpg-game-character-ontology#GameplayEvent"/>
+        <rdfs:comment xml:lang="en">A gameplay event representing the use of a skill by a character.</rdfs:comment>
+        <rdfs:label xml:lang="en">Skill Usage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Weapon -->
+
+
+    <owl:Class rdf:about="http://example.org/rpg-game-character-ontology#Weapon">
+        <rdfs:subClassOf rdf:resource="http://example.org/rpg-game-character-ontology#Equipment"/>
+        <rdfs:comment xml:lang="en">Equipment used by a character for attacking.</rdfs:comment>
+        <rdfs:label xml:lang="en">Weapon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#AdventurersGuild -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#AdventurersGuild">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Faction"/>
+        <rdfs:label xml:lang="en">Adventurers Guild</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#AncientAmulet -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#AncientAmulet">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Item"/>
+        <itemName>Ancient Amulet</itemName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#AncientKnowledge -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#AncientKnowledge">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Skill"/>
+        <rdfs:label xml:lang="en">Ancient Knowledge</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#ArcaneShield -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#ArcaneShield">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Skill"/>
+        <rdfs:label xml:lang="en">Arcane Shield</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Arin -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Arin">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#PlayerCharacter"/>
+        <allyOf rdf:resource="http://example.org/rpg-game-character-ontology#Lyra"/>
+        <belongsToFaction rdf:resource="http://example.org/rpg-game-character-ontology#AdventurersGuild"/>
+        <enemyOf rdf:resource="http://example.org/rpg-game-character-ontology#DarkLord"/>
+        <hasClass rdf:resource="http://example.org/rpg-game-character-ontology#Warrior"/>
+        <hasRace rdf:resource="http://example.org/rpg-game-character-ontology#Human"/>
+        <hasSkill rdf:resource="http://example.org/rpg-game-character-ontology#PowerStrike"/>
+        <hasSkill rdf:resource="http://example.org/rpg-game-character-ontology#ShieldBlock"/>
+        <locatedIn rdf:resource="http://example.org/rpg-game-character-ontology#OldVillage"/>
+        <participatesInQuest rdf:resource="http://example.org/rpg-game-character-ontology#LostRelicQuest"/>
+        <usesWeapon rdf:resource="http://example.org/rpg-game-character-ontology#IronSword"/>
+        <wearsArmor rdf:resource="http://example.org/rpg-game-character-ontology#LeatherArmor"/>
+        <characterName>Arin</characterName>
+        <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#ClothRobe -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#ClothRobe">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Armor"/>
+        <rdfs:label xml:lang="en">Cloth Robe</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#CombatFocused -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#CombatFocused">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#PlayStyle"/>
+        <rdfs:label xml:lang="en">Combat Focused</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#DarkArmor -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#DarkArmor">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Armor"/>
+        <rdfs:label xml:lang="en">Dark Armor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#DarkForest -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#DarkForest">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Location"/>
+        <locationName>Dark Forest</locationName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#DarkLord -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#DarkLord">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#BossEnemy"/>
+        <belongsToFaction rdf:resource="http://example.org/rpg-game-character-ontology#ShadowCult"/>
+        <enemyOf rdf:resource="http://example.org/rpg-game-character-ontology#Arin"/>
+        <enemyOf rdf:resource="http://example.org/rpg-game-character-ontology#Kael"/>
+        <enemyOf rdf:resource="http://example.org/rpg-game-character-ontology#Lyra"/>
+        <hasClass rdf:resource="http://example.org/rpg-game-character-ontology#Mage"/>
+        <hasRace rdf:resource="http://example.org/rpg-game-character-ontology#Human"/>
+        <hasSkill rdf:resource="http://example.org/rpg-game-character-ontology#Fireball"/>
+        <hasSkill rdf:resource="http://example.org/rpg-game-character-ontology#ShadowCurse"/>
+        <locatedIn rdf:resource="http://example.org/rpg-game-character-ontology#ShadowCastle"/>
+        <usesWeapon rdf:resource="http://example.org/rpg-game-character-ontology#ShadowStaff"/>
+        <wearsArmor rdf:resource="http://example.org/rpg-game-character-ontology#DarkArmor"/>
+        <characterName>Dark Lord</characterName>
+        <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#ElderMira -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#ElderMira">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#NonPlayerCharacter"/>
+        <belongsToFaction rdf:resource="http://example.org/rpg-game-character-ontology#AdventurersGuild"/>
+        <givesQuest rdf:resource="http://example.org/rpg-game-character-ontology#HerbGatheringQuest"/>
+        <givesQuest rdf:resource="http://example.org/rpg-game-character-ontology#LostRelicQuest"/>
+        <givesQuest rdf:resource="http://example.org/rpg-game-character-ontology#ShadowGateQuest"/>
+        <hasClass rdf:resource="http://example.org/rpg-game-character-ontology#Sage"/>
+        <hasRace rdf:resource="http://example.org/rpg-game-character-ontology#Human"/>
+        <hasSkill rdf:resource="http://example.org/rpg-game-character-ontology#AncientKnowledge"/>
+        <locatedIn rdf:resource="http://example.org/rpg-game-character-ontology#OldVillage"/>
+        <characterName>Elder Mira</characterName>
+        <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Elf -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Elf">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Race"/>
+        <rdfs:label xml:lang="en">Elf</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Event001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Event001">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#QuestCompletion"/>
+        <completedQuest rdf:resource="http://example.org/rpg-game-character-ontology#LostRelicQuest"/>
+        <eventForCharacter rdf:resource="http://example.org/rpg-game-character-ontology#Arin"/>
+        <eventRelatedQuest rdf:resource="http://example.org/rpg-game-character-ontology#LostRelicQuest"/>
+        <completionStatus>completed</completionStatus>
+        <eventCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</eventCount>
+        <eventTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-04-20T18:30:00</eventTimestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Event002 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Event002">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#SkillUsage"/>
+        <eventForCharacter rdf:resource="http://example.org/rpg-game-character-ontology#Arin"/>
+        <eventRelatedQuest rdf:resource="http://example.org/rpg-game-character-ontology#LostRelicQuest"/>
+        <eventUsesSkill rdf:resource="http://example.org/rpg-game-character-ontology#PowerStrike"/>
+        <eventCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</eventCount>
+        <eventTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-04-20T18:45:00</eventTimestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Event003 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Event003">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#SkillUsage"/>
+        <eventForCharacter rdf:resource="http://example.org/rpg-game-character-ontology#Lyra"/>
+        <eventRelatedQuest rdf:resource="http://example.org/rpg-game-character-ontology#ShadowGateQuest"/>
+        <eventUsesSkill rdf:resource="http://example.org/rpg-game-character-ontology#Fireball"/>
+        <eventCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</eventCount>
+        <eventTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-04-21T20:00:00</eventTimestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Event004 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Event004">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#QuestCompletion"/>
+        <completedQuest rdf:resource="http://example.org/rpg-game-character-ontology#HerbGatheringQuest"/>
+        <eventForCharacter rdf:resource="http://example.org/rpg-game-character-ontology#Kael"/>
+        <eventRelatedQuest rdf:resource="http://example.org/rpg-game-character-ontology#HerbGatheringQuest"/>
+        <completionStatus>completed</completionStatus>
+        <eventCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</eventCount>
+        <eventTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-04-22T17:20:00</eventTimestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Explorer -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Explorer">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#PlayStyle"/>
+        <rdfs:label xml:lang="en">Explorer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Fireball -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Fireball">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Skill"/>
+        <rdfs:label xml:lang="en">Fireball</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#GoblinWarrior -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#GoblinWarrior">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Enemy"/>
+        <belongsToFaction rdf:resource="http://example.org/rpg-game-character-ontology#ShadowCult"/>
+        <enemyOf rdf:resource="http://example.org/rpg-game-character-ontology#Arin"/>
+        <hasClass rdf:resource="http://example.org/rpg-game-character-ontology#Warrior"/>
+        <hasRace rdf:resource="http://example.org/rpg-game-character-ontology#Orc"/>
+        <hasSkill rdf:resource="http://example.org/rpg-game-character-ontology#PowerStrike"/>
+        <locatedIn rdf:resource="http://example.org/rpg-game-character-ontology#DarkForest"/>
+        <usesWeapon rdf:resource="http://example.org/rpg-game-character-ontology#IronSword"/>
+        <wearsArmor rdf:resource="http://example.org/rpg-game-character-ontology#LeatherArmor"/>
+        <characterName>Goblin Warrior</characterName>
+        <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#HealingPotion -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#HealingPotion">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#ConsumableItem"/>
+        <itemName>Healing Potion</itemName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#HerbGatheringQuest -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#HerbGatheringQuest">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Quest"/>
+        <locatedIn rdf:resource="http://example.org/rpg-game-character-ontology#DarkForest"/>
+        <requiresSkill rdf:resource="http://example.org/rpg-game-character-ontology#Tracking"/>
+        <rewardsItem rdf:resource="http://example.org/rpg-game-character-ontology#ManaPotion"/>
+        <questTitle>Forest Herbs</questTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Human -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Human">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Race"/>
+        <rdfs:label xml:lang="en">Human</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#HunterBow -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#HunterBow">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Weapon"/>
+        <rdfs:label xml:lang="en">Hunter Bow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#IronSword -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#IronSword">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Weapon"/>
+        <rdfs:label xml:lang="en">Iron Sword</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Kael -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Kael">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#PlayerCharacter"/>
+        <allyOf rdf:resource="http://example.org/rpg-game-character-ontology#Arin"/>
+        <belongsToFaction rdf:resource="http://example.org/rpg-game-character-ontology#AdventurersGuild"/>
+        <hasClass rdf:resource="http://example.org/rpg-game-character-ontology#Ranger"/>
+        <hasRace rdf:resource="http://example.org/rpg-game-character-ontology#Human"/>
+        <hasSkill rdf:resource="http://example.org/rpg-game-character-ontology#StealthShot"/>
+        <hasSkill rdf:resource="http://example.org/rpg-game-character-ontology#Tracking"/>
+        <locatedIn rdf:resource="http://example.org/rpg-game-character-ontology#DarkForest"/>
+        <participatesInQuest rdf:resource="http://example.org/rpg-game-character-ontology#HerbGatheringQuest"/>
+        <usesWeapon rdf:resource="http://example.org/rpg-game-character-ontology#HunterBow"/>
+        <wearsArmor rdf:resource="http://example.org/rpg-game-character-ontology#LeatherArmor"/>
+        <characterName>Kael</characterName>
+        <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#LeatherArmor -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#LeatherArmor">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Armor"/>
+        <rdfs:label xml:lang="en">Leather Armor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#LostRelicQuest -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#LostRelicQuest">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Quest"/>
+        <locatedIn rdf:resource="http://example.org/rpg-game-character-ontology#DarkForest"/>
+        <requiresSkill rdf:resource="http://example.org/rpg-game-character-ontology#PowerStrike"/>
+        <rewardsItem rdf:resource="http://example.org/rpg-game-character-ontology#HealingPotion"/>
+        <questTitle>The Lost Relic</questTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Lyra -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Lyra">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#PlayerCharacter"/>
+        <belongsToFaction rdf:resource="http://example.org/rpg-game-character-ontology#AdventurersGuild"/>
+        <enemyOf rdf:resource="http://example.org/rpg-game-character-ontology#DarkLord"/>
+        <hasClass rdf:resource="http://example.org/rpg-game-character-ontology#Mage"/>
+        <hasRace rdf:resource="http://example.org/rpg-game-character-ontology#Elf"/>
+        <hasSkill rdf:resource="http://example.org/rpg-game-character-ontology#ArcaneShield"/>
+        <hasSkill rdf:resource="http://example.org/rpg-game-character-ontology#Fireball"/>
+        <locatedIn rdf:resource="http://example.org/rpg-game-character-ontology#OldVillage"/>
+        <participatesInQuest rdf:resource="http://example.org/rpg-game-character-ontology#LostRelicQuest"/>
+        <participatesInQuest rdf:resource="http://example.org/rpg-game-character-ontology#ShadowGateQuest"/>
+        <usesWeapon rdf:resource="http://example.org/rpg-game-character-ontology#OakStaff"/>
+        <wearsArmor rdf:resource="http://example.org/rpg-game-character-ontology#ClothRobe"/>
+        <characterName>Lyra</characterName>
+        <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Mage -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Mage">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#CharacterClass"/>
+        <rdfs:label xml:lang="en">Mage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#MagicFocused -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#MagicFocused">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#PlayStyle"/>
+        <rdfs:label xml:lang="en">Magic Focused</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#ManaPotion -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#ManaPotion">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#ConsumableItem"/>
+        <itemName>Mana Potion</itemName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#OakStaff -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#OakStaff">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Weapon"/>
+        <rdfs:label xml:lang="en">Oak Staff</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#OldVillage -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#OldVillage">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Location"/>
+        <locationName>Old Village</locationName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Orc -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Orc">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Race"/>
+        <rdfs:label xml:lang="en">Orc</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Player001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Player001">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Player"/>
+        <controlsCharacter rdf:resource="http://example.org/rpg-game-character-ontology#Arin"/>
+        <hasPlayStyle rdf:resource="http://example.org/rpg-game-character-ontology#CombatFocused"/>
+        <performsEvent rdf:resource="http://example.org/rpg-game-character-ontology#Event001"/>
+        <performsEvent rdf:resource="http://example.org/rpg-game-character-ontology#Event002"/>
+        <playerName>Sample Player 001</playerName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Player002 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Player002">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Player"/>
+        <controlsCharacter rdf:resource="http://example.org/rpg-game-character-ontology#Lyra"/>
+        <hasPlayStyle rdf:resource="http://example.org/rpg-game-character-ontology#MagicFocused"/>
+        <performsEvent rdf:resource="http://example.org/rpg-game-character-ontology#Event003"/>
+        <playerName>Sample Player 002</playerName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Player003 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Player003">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Player"/>
+        <controlsCharacter rdf:resource="http://example.org/rpg-game-character-ontology#Kael"/>
+        <hasPlayStyle rdf:resource="http://example.org/rpg-game-character-ontology#Explorer"/>
+        <performsEvent rdf:resource="http://example.org/rpg-game-character-ontology#Event004"/>
+        <playerName>Sample Player 003</playerName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#PowerStrike -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#PowerStrike">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Skill"/>
+        <rdfs:label xml:lang="en">Power Strike</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Ranger -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Ranger">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#CharacterClass"/>
+        <rdfs:label xml:lang="en">Ranger</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Recommendation001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Recommendation001">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Recommendation"/>
+        <recommendationForPlayer rdf:resource="http://example.org/rpg-game-character-ontology#Player001"/>
+        <recommendedQuest rdf:resource="http://example.org/rpg-game-character-ontology#ShadowGateQuest"/>
+        <recommendedSkill rdf:resource="http://example.org/rpg-game-character-ontology#ShieldBlock"/>
+        <preferenceScore rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.82</preferenceScore>
+        <recommendationReason>Player001 frequently uses Warrior-related skills and has completed the prerequisite LostRelicQuest.</recommendationReason>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Recommendation002 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Recommendation002">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Recommendation"/>
+        <recommendationForPlayer rdf:resource="http://example.org/rpg-game-character-ontology#Player002"/>
+        <recommendedQuest rdf:resource="http://example.org/rpg-game-character-ontology#ShadowGateQuest"/>
+        <recommendedSkill rdf:resource="http://example.org/rpg-game-character-ontology#ArcaneShield"/>
+        <preferenceScore rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.90</preferenceScore>
+        <recommendationReason>Player002 controls a Mage character and frequently uses Fireball.</recommendationReason>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Sage -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Sage">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#CharacterClass"/>
+        <rdfs:label xml:lang="en">Sage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#ShadowCastle -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#ShadowCastle">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Location"/>
+        <locationName>Shadow Castle</locationName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#ShadowCult -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#ShadowCult">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Faction"/>
+        <rdfs:label xml:lang="en">Shadow Cult</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#ShadowCurse -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#ShadowCurse">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Skill"/>
+        <rdfs:label xml:lang="en">Shadow Curse</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#ShadowGateQuest -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#ShadowGateQuest">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Quest"/>
+        <locatedIn rdf:resource="http://example.org/rpg-game-character-ontology#ShadowCastle"/>
+        <requiresSkill rdf:resource="http://example.org/rpg-game-character-ontology#Fireball"/>
+        <rewardsItem rdf:resource="http://example.org/rpg-game-character-ontology#AncientAmulet"/>
+        <questTitle>The Shadow Gate</questTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#ShadowStaff -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#ShadowStaff">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Weapon"/>
+        <rdfs:label xml:lang="en">Shadow Staff</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#ShieldBlock -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#ShieldBlock">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Skill"/>
+        <rdfs:label xml:lang="en">Shield Block</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#StealthShot -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#StealthShot">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Skill"/>
+        <rdfs:label xml:lang="en">Stealth Shot</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Tracking -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Tracking">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#Skill"/>
+        <rdfs:label xml:lang="en">Tracking</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/rpg-game-character-ontology#Warrior -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/rpg-game-character-ontology#Warrior">
+        <rdf:type rdf:resource="http://example.org/rpg-game-character-ontology#CharacterClass"/>
+        <rdfs:label xml:lang="en">Warrior</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
