@@ -1,0 +1,2 @@
+Ontology TTL parsed successfully. Triple count: 484
+SHACL TTL parsed successfully. Triple count: 85

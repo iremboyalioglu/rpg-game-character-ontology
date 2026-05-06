@@ -1,0 +1,7 @@
+character_id,character_name,character_type,character_class,race,level,skills,weapon,armor,faction,location,active_quest
+char_arin,Arin,PlayerCharacter,Warrior,Human,12,PowerStrike;ShieldBlock,IronSword,LeatherArmor,AdventurersGuild,OldVillage,LostRelicQuest
+char_lyra,Lyra,PlayerCharacter,Mage,Elf,10,Fireball;ArcaneShield,OakStaff,ClothRobe,AdventurersGuild,OldVillage,LostRelicQuest
+char_elder_mira,Elder Mira,NonPlayerCharacter,Sage,Human,20,AncientKnowledge,,,AdventurersGuild,OldVillage,LostRelicQuest
+char_goblin_warrior,Goblin Warrior,Enemy,Warrior,Orc,5,PowerStrike,IronSword,LeatherArmor,ShadowCult,DarkForest,LostRelicQuest
+char_dark_lord,Dark Lord,BossEnemy,Mage,Human,40,Fireball;ShadowCurse,ShadowStaff,DarkArmor,ShadowCult,ShadowCastle,ShadowGateQuest
+char_kael,Kael,PlayerCharacter,Ranger,Human,8,StealthShot;Tracking,HunterBow,LeatherArmor,AdventurersGuild,DarkForest,HerbGatheringQuest

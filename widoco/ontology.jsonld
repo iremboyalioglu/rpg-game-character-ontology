@@ -1,0 +1,1767 @@
+[ {
+  "@id" : "http://example.org/rpg-game-character-ontology#",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Yunus Erdem Ocak"
+  }, {
+    "@value" : "İrem Boyalıoğlu"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "An OWL/RDF ontology for a small-scale RPG game character and quest knowledge graph, extended in v2 with data acquisition, player behavior events, and recommendation-oriented concepts."
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "RPG Game Character Ontology"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "rpg"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "http://example.org/rpg-game-character-ontology#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Version 2 of a small-scale ontology for modeling RPG game characters, quests, items, locations, player behavior events, play styles, and simple recommendations."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "RPG Game Character Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "2.0"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#AdventurersGuild",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Faction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Adventurers Guild"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#AncientAmulet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#itemName" : [ {
+    "@value" : "Ancient Amulet"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Item"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#AncientKnowledge",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Skill"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ancient Knowledge"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#ArcaneShield",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Skill"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Arcane Shield"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Arin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#allyOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Lyra"
+  } ],
+  "http://example.org/rpg-game-character-ontology#belongsToFaction" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#AdventurersGuild"
+  } ],
+  "http://example.org/rpg-game-character-ontology#characterName" : [ {
+    "@value" : "Arin"
+  } ],
+  "http://example.org/rpg-game-character-ontology#enemyOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#DarkLord"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasClass" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Warrior"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasRace" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Human"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasSkill" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#PowerStrike"
+  }, {
+    "@id" : "http://example.org/rpg-game-character-ontology#ShieldBlock"
+  } ],
+  "http://example.org/rpg-game-character-ontology#level" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "12"
+  } ],
+  "http://example.org/rpg-game-character-ontology#locatedIn" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#OldVillage"
+  } ],
+  "http://example.org/rpg-game-character-ontology#participatesInQuest" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#LostRelicQuest"
+  } ],
+  "http://example.org/rpg-game-character-ontology#usesWeapon" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#IronSword"
+  } ],
+  "http://example.org/rpg-game-character-ontology#wearsArmor" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#LeatherArmor"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#PlayerCharacter"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Armor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Equipment used by a character for protection."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Armor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Equipment"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#BossEnemy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A powerful enemy usually associated with an important challenge."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Boss Enemy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Enemy"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#CharacterClass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A role or profession of a character, such as Warrior, Mage, Ranger, or Sage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Character Class"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameEntity"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#CharacterProgression",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A representation of character development over time, such as level growth or repeated skill usage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Character Progression"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#ClothRobe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Armor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cloth Robe"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#CombatFocused",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#PlayStyle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Combat Focused"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#ConsumableItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An item that can be consumed by a character."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Consumable Item"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Item"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#DarkArmor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Armor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Dark Armor"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#DarkForest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#locationName" : [ {
+    "@value" : "Dark Forest"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Location"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#DarkLord",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#belongsToFaction" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#ShadowCult"
+  } ],
+  "http://example.org/rpg-game-character-ontology#characterName" : [ {
+    "@value" : "Dark Lord"
+  } ],
+  "http://example.org/rpg-game-character-ontology#enemyOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Arin"
+  }, {
+    "@id" : "http://example.org/rpg-game-character-ontology#Kael"
+  }, {
+    "@id" : "http://example.org/rpg-game-character-ontology#Lyra"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasClass" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Mage"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasRace" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Human"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasSkill" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Fireball"
+  }, {
+    "@id" : "http://example.org/rpg-game-character-ontology#ShadowCurse"
+  } ],
+  "http://example.org/rpg-game-character-ontology#level" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "40"
+  } ],
+  "http://example.org/rpg-game-character-ontology#locatedIn" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#ShadowCastle"
+  } ],
+  "http://example.org/rpg-game-character-ontology#usesWeapon" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#ShadowStaff"
+  } ],
+  "http://example.org/rpg-game-character-ontology#wearsArmor" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#DarkArmor"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#BossEnemy"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#ElderMira",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#belongsToFaction" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#AdventurersGuild"
+  } ],
+  "http://example.org/rpg-game-character-ontology#characterName" : [ {
+    "@value" : "Elder Mira"
+  } ],
+  "http://example.org/rpg-game-character-ontology#givesQuest" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#HerbGatheringQuest"
+  }, {
+    "@id" : "http://example.org/rpg-game-character-ontology#LostRelicQuest"
+  }, {
+    "@id" : "http://example.org/rpg-game-character-ontology#ShadowGateQuest"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasClass" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Sage"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasRace" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Human"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasSkill" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#AncientKnowledge"
+  } ],
+  "http://example.org/rpg-game-character-ontology#level" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "20"
+  } ],
+  "http://example.org/rpg-game-character-ontology#locatedIn" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#OldVillage"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#NonPlayerCharacter"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Elf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Race"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Elf"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Enemy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A hostile character that can oppose player characters."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Enemy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameCharacter"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Equipment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An item that can be equipped by a character."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Equipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameEntity"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Event001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#completedQuest" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#LostRelicQuest"
+  } ],
+  "http://example.org/rpg-game-character-ontology#completionStatus" : [ {
+    "@value" : "completed"
+  } ],
+  "http://example.org/rpg-game-character-ontology#eventCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://example.org/rpg-game-character-ontology#eventForCharacter" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Arin"
+  } ],
+  "http://example.org/rpg-game-character-ontology#eventRelatedQuest" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#LostRelicQuest"
+  } ],
+  "http://example.org/rpg-game-character-ontology#eventTimestamp" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-04-20T18:30:00"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#QuestCompletion"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Event002",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#eventCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "7"
+  } ],
+  "http://example.org/rpg-game-character-ontology#eventForCharacter" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Arin"
+  } ],
+  "http://example.org/rpg-game-character-ontology#eventRelatedQuest" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#LostRelicQuest"
+  } ],
+  "http://example.org/rpg-game-character-ontology#eventTimestamp" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-04-20T18:45:00"
+  } ],
+  "http://example.org/rpg-game-character-ontology#eventUsesSkill" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#PowerStrike"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#SkillUsage"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Event003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#eventCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "12"
+  } ],
+  "http://example.org/rpg-game-character-ontology#eventForCharacter" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Lyra"
+  } ],
+  "http://example.org/rpg-game-character-ontology#eventRelatedQuest" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#ShadowGateQuest"
+  } ],
+  "http://example.org/rpg-game-character-ontology#eventTimestamp" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-04-21T20:00:00"
+  } ],
+  "http://example.org/rpg-game-character-ontology#eventUsesSkill" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Fireball"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#SkillUsage"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Event004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#completedQuest" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#HerbGatheringQuest"
+  } ],
+  "http://example.org/rpg-game-character-ontology#completionStatus" : [ {
+    "@value" : "completed"
+  } ],
+  "http://example.org/rpg-game-character-ontology#eventCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://example.org/rpg-game-character-ontology#eventForCharacter" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Kael"
+  } ],
+  "http://example.org/rpg-game-character-ontology#eventRelatedQuest" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#HerbGatheringQuest"
+  } ],
+  "http://example.org/rpg-game-character-ontology#eventTimestamp" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-04-22T17:20:00"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#QuestCompletion"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Explorer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#PlayStyle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Explorer"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Faction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A group or organization that characters may belong to."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Faction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameEntity"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Fireball",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Skill"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fireball"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#GameCharacter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A character entity in the game world."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Game Character"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameEntity"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#GameEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A general entity that exists in the RPG game world."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Game Entity"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#GameplayEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An event generated by player activity, such as completing a quest or using a skill."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Gameplay Event"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#GoblinWarrior",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#belongsToFaction" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#ShadowCult"
+  } ],
+  "http://example.org/rpg-game-character-ontology#characterName" : [ {
+    "@value" : "Goblin Warrior"
+  } ],
+  "http://example.org/rpg-game-character-ontology#enemyOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Arin"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasClass" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Warrior"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasRace" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Orc"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasSkill" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#PowerStrike"
+  } ],
+  "http://example.org/rpg-game-character-ontology#level" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "5"
+  } ],
+  "http://example.org/rpg-game-character-ontology#locatedIn" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#DarkForest"
+  } ],
+  "http://example.org/rpg-game-character-ontology#usesWeapon" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#IronSword"
+  } ],
+  "http://example.org/rpg-game-character-ontology#wearsArmor" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#LeatherArmor"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Enemy"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#HealingPotion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#itemName" : [ {
+    "@value" : "Healing Potion"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#ConsumableItem"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#HerbGatheringQuest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#locatedIn" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#DarkForest"
+  } ],
+  "http://example.org/rpg-game-character-ontology#questTitle" : [ {
+    "@value" : "Forest Herbs"
+  } ],
+  "http://example.org/rpg-game-character-ontology#requiresSkill" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Tracking"
+  } ],
+  "http://example.org/rpg-game-character-ontology#rewardsItem" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#ManaPotion"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Quest"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Human",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Race"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Human"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#HunterBow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Weapon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Hunter Bow"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#IronSword",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Weapon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Iron Sword"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Item",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A general object in the game world."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Item"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameEntity"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Kael",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#allyOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Arin"
+  } ],
+  "http://example.org/rpg-game-character-ontology#belongsToFaction" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#AdventurersGuild"
+  } ],
+  "http://example.org/rpg-game-character-ontology#characterName" : [ {
+    "@value" : "Kael"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasClass" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Ranger"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasRace" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Human"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasSkill" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#StealthShot"
+  }, {
+    "@id" : "http://example.org/rpg-game-character-ontology#Tracking"
+  } ],
+  "http://example.org/rpg-game-character-ontology#level" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "8"
+  } ],
+  "http://example.org/rpg-game-character-ontology#locatedIn" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#DarkForest"
+  } ],
+  "http://example.org/rpg-game-character-ontology#participatesInQuest" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#HerbGatheringQuest"
+  } ],
+  "http://example.org/rpg-game-character-ontology#usesWeapon" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#HunterBow"
+  } ],
+  "http://example.org/rpg-game-character-ontology#wearsArmor" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#LeatherArmor"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#PlayerCharacter"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#LeatherArmor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Armor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Leather Armor"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A place or area in the game world."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameEntity"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#LostRelicQuest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#locatedIn" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#DarkForest"
+  } ],
+  "http://example.org/rpg-game-character-ontology#questTitle" : [ {
+    "@value" : "The Lost Relic"
+  } ],
+  "http://example.org/rpg-game-character-ontology#requiresSkill" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#PowerStrike"
+  } ],
+  "http://example.org/rpg-game-character-ontology#rewardsItem" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#HealingPotion"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Quest"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Lyra",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#belongsToFaction" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#AdventurersGuild"
+  } ],
+  "http://example.org/rpg-game-character-ontology#characterName" : [ {
+    "@value" : "Lyra"
+  } ],
+  "http://example.org/rpg-game-character-ontology#enemyOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#DarkLord"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasClass" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Mage"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasRace" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Elf"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasSkill" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#ArcaneShield"
+  }, {
+    "@id" : "http://example.org/rpg-game-character-ontology#Fireball"
+  } ],
+  "http://example.org/rpg-game-character-ontology#level" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "10"
+  } ],
+  "http://example.org/rpg-game-character-ontology#locatedIn" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#OldVillage"
+  } ],
+  "http://example.org/rpg-game-character-ontology#participatesInQuest" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#LostRelicQuest"
+  }, {
+    "@id" : "http://example.org/rpg-game-character-ontology#ShadowGateQuest"
+  } ],
+  "http://example.org/rpg-game-character-ontology#usesWeapon" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#OakStaff"
+  } ],
+  "http://example.org/rpg-game-character-ontology#wearsArmor" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#ClothRobe"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#PlayerCharacter"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Mage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#CharacterClass"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Mage"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#MagicFocused",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#PlayStyle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Magic Focused"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#ManaPotion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#itemName" : [ {
+    "@value" : "Mana Potion"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#ConsumableItem"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#NonPlayerCharacter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A character controlled by the game system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Non-Player Character"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameCharacter"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#OakStaff",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Weapon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Oak Staff"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#OldVillage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#locationName" : [ {
+    "@value" : "Old Village"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Location"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Orc",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Race"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Orc"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#PlayStyle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A high-level behavioral category inferred from player activity, such as Explorer, CombatFocused, or QuestOriented."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Play Style"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Player",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A human user or player profile that controls one or more player characters."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Player"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Player001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#controlsCharacter" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Arin"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasPlayStyle" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#CombatFocused"
+  } ],
+  "http://example.org/rpg-game-character-ontology#performsEvent" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Event001"
+  }, {
+    "@id" : "http://example.org/rpg-game-character-ontology#Event002"
+  } ],
+  "http://example.org/rpg-game-character-ontology#playerName" : [ {
+    "@value" : "Sample Player 001"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Player"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Player002",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#controlsCharacter" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Lyra"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasPlayStyle" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#MagicFocused"
+  } ],
+  "http://example.org/rpg-game-character-ontology#performsEvent" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Event003"
+  } ],
+  "http://example.org/rpg-game-character-ontology#playerName" : [ {
+    "@value" : "Sample Player 002"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Player"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Player003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#controlsCharacter" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Kael"
+  } ],
+  "http://example.org/rpg-game-character-ontology#hasPlayStyle" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Explorer"
+  } ],
+  "http://example.org/rpg-game-character-ontology#performsEvent" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Event004"
+  } ],
+  "http://example.org/rpg-game-character-ontology#playerName" : [ {
+    "@value" : "Sample Player 003"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Player"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#PlayerCharacter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A character controlled by the player."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Player Character"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameCharacter"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#PowerStrike",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Skill"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Power Strike"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Quest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A mission or task in the game world."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Quest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameEntity"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#QuestCompletion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A gameplay event representing the completion of a quest."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Quest Completion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameplayEvent"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Race",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The species or ancestry of a character."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Race"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameEntity"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Ranger",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#CharacterClass"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ranger"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Recommendation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A suggested quest, skill, or item generated from ontology-based player and character information."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Recommendation"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Recommendation001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#preferenceScore" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.82"
+  } ],
+  "http://example.org/rpg-game-character-ontology#recommendationForPlayer" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Player001"
+  } ],
+  "http://example.org/rpg-game-character-ontology#recommendationReason" : [ {
+    "@value" : "Player001 frequently uses Warrior-related skills and has completed the prerequisite LostRelicQuest."
+  } ],
+  "http://example.org/rpg-game-character-ontology#recommendedQuest" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#ShadowGateQuest"
+  } ],
+  "http://example.org/rpg-game-character-ontology#recommendedSkill" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#ShieldBlock"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Recommendation"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Recommendation002",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#preferenceScore" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.90"
+  } ],
+  "http://example.org/rpg-game-character-ontology#recommendationForPlayer" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Player002"
+  } ],
+  "http://example.org/rpg-game-character-ontology#recommendationReason" : [ {
+    "@value" : "Player002 controls a Mage character and frequently uses Fireball."
+  } ],
+  "http://example.org/rpg-game-character-ontology#recommendedQuest" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#ShadowGateQuest"
+  } ],
+  "http://example.org/rpg-game-character-ontology#recommendedSkill" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#ArcaneShield"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Recommendation"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Sage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#CharacterClass"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sage"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#ShadowCastle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#locationName" : [ {
+    "@value" : "Shadow Castle"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Location"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#ShadowCult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Faction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Shadow Cult"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#ShadowCurse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Skill"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Shadow Curse"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#ShadowGateQuest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/rpg-game-character-ontology#locatedIn" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#ShadowCastle"
+  } ],
+  "http://example.org/rpg-game-character-ontology#questTitle" : [ {
+    "@value" : "The Shadow Gate"
+  } ],
+  "http://example.org/rpg-game-character-ontology#requiresSkill" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Fireball"
+  } ],
+  "http://example.org/rpg-game-character-ontology#rewardsItem" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#AncientAmulet"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Quest"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#ShadowStaff",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Weapon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Shadow Staff"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#ShieldBlock",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Skill"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Shield Block"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Skill",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An ability that can be used by a character."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Skill"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameEntity"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#SkillUsage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A gameplay event representing the use of a skill by a character."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Skill Usage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameplayEvent"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#StealthShot",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Skill"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Stealth Shot"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Tracking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Skill"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tracking"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Warrior",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#CharacterClass"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Warrior"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#Weapon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Equipment used by a character for attacking."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Weapon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Equipment"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#allyOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates two game characters that are allies."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameCharacter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ally of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameCharacter"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#belongsToFaction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a game character to a faction."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameCharacter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "belongs to faction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Faction"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#characterName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Textual display name of a character."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameCharacter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "character name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#completedQuest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a quest completion event to the completed quest."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#QuestCompletion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "completed quest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Quest"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#completionStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Completion state of a quest event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#QuestCompletion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "completion status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#controlsCharacter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a player profile to the player character controlled by that player."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Player"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "controls character"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#PlayerCharacter"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#enemyOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates two game characters that are enemies."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameCharacter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "enemy of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameCharacter"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#eventCount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of times a repeated gameplay behavior occurred in the sample data."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameplayEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "event count"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#eventForCharacter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a gameplay event to the character involved in that event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameplayEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "event for character"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameCharacter"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#eventRelatedQuest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a gameplay event to the quest involved in the event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameplayEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "event related quest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Quest"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#eventTimestamp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Timestamp of a gameplay event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameplayEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "event timestamp"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#eventUsesSkill",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a skill usage event to the skill used."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#SkillUsage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "event uses skill"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Skill"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#givesQuest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an NPC to a quest that the NPC gives."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#NonPlayerCharacter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "gives quest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Quest"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#hasClass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a game character to a character class."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameCharacter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has class"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#CharacterClass"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#hasPlayStyle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a player to a high-level play style category."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Player"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has play style"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#PlayStyle"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#hasRace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a game character to a race."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameCharacter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has race"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Race"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#hasSkill",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a game character to a skill."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameCharacter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has skill"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Skill"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#itemName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Textual display name of an item."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Item"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "item name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#level",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Numeric level of a game character."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameCharacter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#locatedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a game entity to a location."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "located in"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Location"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#locationName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Textual display name of a location."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "location name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#participatesInQuest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a character to a quest in which the character participates."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameCharacter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "participates in quest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Quest"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#performsEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a player to a gameplay event performed by that player."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Player"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "performs event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameplayEvent"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#playerName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Textual display name of a player profile."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Player"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "player name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#preferenceScore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Simple score used to rank a recommendation in the sample knowledge graph."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Recommendation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "preference score"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#questTitle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Textual title of a quest."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Quest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "quest title"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#recommendationForPlayer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a recommendation to the player for whom it was generated."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Recommendation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "recommendation for player"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Player"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#recommendationReason",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Textual explanation for why a recommendation was generated."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Recommendation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "recommendation reason"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#recommendedQuest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a recommendation to a suggested quest."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Recommendation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "recommended quest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Quest"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#recommendedSkill",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a recommendation to a suggested skill."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Recommendation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "recommended skill"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Skill"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#requiresSkill",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a quest to a skill required for completing it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Quest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "requires skill"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Skill"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#rewardsItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a quest to an item rewarded after completion."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Quest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "rewards item"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Item"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#usesWeapon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a game character to a weapon used by that character."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameCharacter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "uses weapon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Weapon"
+  } ]
+}, {
+  "@id" : "http://example.org/rpg-game-character-ontology#wearsArmor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a game character to armor worn by that character."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#GameCharacter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "wears armor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/rpg-game-character-ontology#Armor"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]

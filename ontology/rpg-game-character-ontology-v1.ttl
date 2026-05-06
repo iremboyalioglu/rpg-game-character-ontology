@@ -1,0 +1,340 @@
+@prefix rpg: <http://example.org/rpg-game-character-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rpg: a owl:Ontology ;
+    rdfs:label "RPG Game Character Ontology" ;
+    rdfs:comment "A small-scale ontology for modeling RPG game characters, classes, races, skills, equipment, quests, factions, and locations." .
+
+#################################################################
+# Classes
+#################################################################
+
+rpg:GameEntity a owl:Class ;
+    rdfs:label "Game Entity" ;
+    rdfs:comment "A general entity that exists in the RPG game world." .
+
+rpg:GameCharacter a owl:Class ;
+    rdfs:subClassOf rpg:GameEntity ;
+    rdfs:label "Game Character" ;
+    rdfs:comment "A character entity in the game world." .
+
+rpg:PlayerCharacter a owl:Class ;
+    rdfs:subClassOf rpg:GameCharacter ;
+    rdfs:label "Player Character" ;
+    rdfs:comment "A character controlled by the player." .
+
+rpg:NonPlayerCharacter a owl:Class ;
+    rdfs:subClassOf rpg:GameCharacter ;
+    rdfs:label "Non-Player Character" ;
+    rdfs:comment "A character controlled by the game system." .
+
+rpg:Enemy a owl:Class ;
+    rdfs:subClassOf rpg:GameCharacter ;
+    rdfs:label "Enemy" ;
+    rdfs:comment "A hostile character that can oppose player characters." .
+
+rpg:BossEnemy a owl:Class ;
+    rdfs:subClassOf rpg:Enemy ;
+    rdfs:label "Boss Enemy" ;
+    rdfs:comment "A powerful enemy usually associated with an important challenge." .
+
+rpg:CharacterClass a owl:Class ;
+    rdfs:subClassOf rpg:GameEntity ;
+    rdfs:label "Character Class" ;
+    rdfs:comment "A role or profession of a character, such as Warrior or Mage." .
+
+rpg:Race a owl:Class ;
+    rdfs:subClassOf rpg:GameEntity ;
+    rdfs:label "Race" ;
+    rdfs:comment "The species or ancestry of a character." .
+
+rpg:Skill a owl:Class ;
+    rdfs:subClassOf rpg:GameEntity ;
+    rdfs:label "Skill" ;
+    rdfs:comment "An ability that can be used by a character." .
+
+rpg:Equipment a owl:Class ;
+    rdfs:subClassOf rpg:GameEntity ;
+    rdfs:label "Equipment" ;
+    rdfs:comment "An item that can be equipped by a character." .
+
+rpg:Weapon a owl:Class ;
+    rdfs:subClassOf rpg:Equipment ;
+    rdfs:label "Weapon" ;
+    rdfs:comment "Equipment used by a character for attacking." .
+
+rpg:Armor a owl:Class ;
+    rdfs:subClassOf rpg:Equipment ;
+    rdfs:label "Armor" ;
+    rdfs:comment "Equipment used by a character for protection." .
+
+rpg:Item a owl:Class ;
+    rdfs:subClassOf rpg:GameEntity ;
+    rdfs:label "Item" ;
+    rdfs:comment "A general object in the game world." .
+
+rpg:ConsumableItem a owl:Class ;
+    rdfs:subClassOf rpg:Item ;
+    rdfs:label "Consumable Item" ;
+    rdfs:comment "An item that can be consumed by a character." .
+
+rpg:Quest a owl:Class ;
+    rdfs:subClassOf rpg:GameEntity ;
+    rdfs:label "Quest" ;
+    rdfs:comment "A mission or task in the game world." .
+
+rpg:Location a owl:Class ;
+    rdfs:subClassOf rpg:GameEntity ;
+    rdfs:label "Location" ;
+    rdfs:comment "A place or area in the game world." .
+
+rpg:Faction a owl:Class ;
+    rdfs:subClassOf rpg:GameEntity ;
+    rdfs:label "Faction" ;
+    rdfs:comment "A group or organization that characters may belong to." .
+
+#################################################################
+# Object Properties
+#################################################################
+
+rpg:hasClass a owl:ObjectProperty ;
+    rdfs:domain rpg:GameCharacter ;
+    rdfs:range rpg:CharacterClass ;
+    rdfs:label "has class" ;
+    rdfs:comment "Relates a game character to a character class." .
+
+rpg:hasRace a owl:ObjectProperty ;
+    rdfs:domain rpg:GameCharacter ;
+    rdfs:range rpg:Race ;
+    rdfs:label "has race" ;
+    rdfs:comment "Relates a game character to a race." .
+
+rpg:hasSkill a owl:ObjectProperty ;
+    rdfs:domain rpg:GameCharacter ;
+    rdfs:range rpg:Skill ;
+    rdfs:label "has skill" ;
+    rdfs:comment "Relates a game character to a skill." .
+
+rpg:usesWeapon a owl:ObjectProperty ;
+    rdfs:domain rpg:GameCharacter ;
+    rdfs:range rpg:Weapon ;
+    rdfs:label "uses weapon" ;
+    rdfs:comment "Relates a game character to a weapon used by that character." .
+
+rpg:wearsArmor a owl:ObjectProperty ;
+    rdfs:domain rpg:GameCharacter ;
+    rdfs:range rpg:Armor ;
+    rdfs:label "wears armor" ;
+    rdfs:comment "Relates a game character to armor worn by that character." .
+
+rpg:belongsToFaction a owl:ObjectProperty ;
+    rdfs:domain rpg:GameCharacter ;
+    rdfs:range rpg:Faction ;
+    rdfs:label "belongs to faction" ;
+    rdfs:comment "Relates a game character to a faction." .
+
+rpg:locatedIn a owl:ObjectProperty ;
+    rdfs:domain rpg:GameEntity ;
+    rdfs:range rpg:Location ;
+    rdfs:label "located in" ;
+    rdfs:comment "Relates a game entity to a location." .
+
+rpg:givesQuest a owl:ObjectProperty ;
+    rdfs:domain rpg:NonPlayerCharacter ;
+    rdfs:range rpg:Quest ;
+    rdfs:label "gives quest" ;
+    rdfs:comment "Relates an NPC to a quest that the NPC gives." .
+
+rpg:participatesInQuest a owl:ObjectProperty ;
+    rdfs:domain rpg:GameCharacter ;
+    rdfs:range rpg:Quest ;
+    rdfs:label "participates in quest" ;
+    rdfs:comment "Relates a character to a quest in which the character participates." .
+
+rpg:allyOf a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:domain rpg:GameCharacter ;
+    rdfs:range rpg:GameCharacter ;
+    rdfs:label "ally of" ;
+    rdfs:comment "Relates two game characters that are allies." .
+
+rpg:enemyOf a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:domain rpg:GameCharacter ;
+    rdfs:range rpg:GameCharacter ;
+    rdfs:label "enemy of" ;
+    rdfs:comment "Relates two game characters that are enemies." .
+
+rpg:requiresSkill a owl:ObjectProperty ;
+    rdfs:domain rpg:Quest ;
+    rdfs:range rpg:Skill ;
+    rdfs:label "requires skill" ;
+    rdfs:comment "Relates a quest to a skill required for completing it." .
+
+rpg:rewardsItem a owl:ObjectProperty ;
+    rdfs:domain rpg:Quest ;
+    rdfs:range rpg:Item ;
+    rdfs:label "rewards item" ;
+    rdfs:comment "Relates a quest to an item rewarded after completion." .
+
+#################################################################
+# Data Properties
+#################################################################
+
+rpg:characterName a owl:DatatypeProperty ;
+    rdfs:domain rpg:GameCharacter ;
+    rdfs:range xsd:string ;
+    rdfs:label "character name" .
+
+rpg:level a owl:DatatypeProperty ;
+    rdfs:domain rpg:GameCharacter ;
+    rdfs:range xsd:integer ;
+    rdfs:label "level" .
+
+rpg:questTitle a owl:DatatypeProperty ;
+    rdfs:domain rpg:Quest ;
+    rdfs:range xsd:string ;
+    rdfs:label "quest title" .
+
+rpg:locationName a owl:DatatypeProperty ;
+    rdfs:domain rpg:Location ;
+    rdfs:range xsd:string ;
+    rdfs:label "location name" .
+
+rpg:itemName a owl:DatatypeProperty ;
+    rdfs:domain rpg:Item ;
+    rdfs:range xsd:string ;
+    rdfs:label "item name" .
+
+#################################################################
+# Individuals
+#################################################################
+
+# Character Classes
+
+rpg:Warrior a rpg:CharacterClass ;
+    rdfs:label "Warrior" .
+
+rpg:Mage a rpg:CharacterClass ;
+    rdfs:label "Mage" .
+
+rpg:Ranger a rpg:CharacterClass ;
+    rdfs:label "Ranger" .
+
+# Races
+
+rpg:Human a rpg:Race ;
+    rdfs:label "Human" .
+
+rpg:Elf a rpg:Race ;
+    rdfs:label "Elf" .
+
+rpg:Orc a rpg:Race ;
+    rdfs:label "Orc" .
+
+# Skills
+
+rpg:PowerStrike a rpg:Skill ;
+    rdfs:label "Power Strike" .
+
+rpg:Fireball a rpg:Skill ;
+    rdfs:label "Fireball" .
+
+rpg:StealthShot a rpg:Skill ;
+    rdfs:label "Stealth Shot" .
+
+# Items and Equipment
+
+rpg:IronSword a rpg:Weapon ;
+    rdfs:label "Iron Sword" .
+
+rpg:OakStaff a rpg:Weapon ;
+    rdfs:label "Oak Staff" .
+
+rpg:LeatherArmor a rpg:Armor ;
+    rdfs:label "Leather Armor" .
+
+rpg:HealingPotion a rpg:ConsumableItem ;
+    rpg:itemName "Healing Potion" .
+
+# Locations
+
+rpg:OldVillage a rpg:Location ;
+    rpg:locationName "Old Village" .
+
+rpg:DarkForest a rpg:Location ;
+    rpg:locationName "Dark Forest" .
+
+rpg:ShadowCastle a rpg:Location ;
+    rpg:locationName "Shadow Castle" .
+
+# Factions
+
+rpg:AdventurersGuild a rpg:Faction ;
+    rdfs:label "Adventurers Guild" .
+
+rpg:ShadowCult a rpg:Faction ;
+    rdfs:label "Shadow Cult" .
+
+# Quests
+
+rpg:LostRelicQuest a rpg:Quest ;
+    rpg:questTitle "The Lost Relic" ;
+    rpg:requiresSkill rpg:PowerStrike ;
+    rpg:rewardsItem rpg:HealingPotion .
+
+# Characters
+
+rpg:Arin a rpg:PlayerCharacter ;
+    rpg:characterName "Arin" ;
+    rpg:level 12 ;
+    rpg:hasClass rpg:Warrior ;
+    rpg:hasRace rpg:Human ;
+    rpg:hasSkill rpg:PowerStrike ;
+    rpg:usesWeapon rpg:IronSword ;
+    rpg:wearsArmor rpg:LeatherArmor ;
+    rpg:belongsToFaction rpg:AdventurersGuild ;
+    rpg:locatedIn rpg:OldVillage ;
+    rpg:participatesInQuest rpg:LostRelicQuest ;
+    rpg:allyOf rpg:Lyra ;
+    rpg:enemyOf rpg:DarkLord .
+
+rpg:Lyra a rpg:PlayerCharacter ;
+    rpg:characterName "Lyra" ;
+    rpg:level 10 ;
+    rpg:hasClass rpg:Mage ;
+    rpg:hasRace rpg:Elf ;
+    rpg:hasSkill rpg:Fireball ;
+    rpg:usesWeapon rpg:OakStaff ;
+    rpg:belongsToFaction rpg:AdventurersGuild ;
+    rpg:locatedIn rpg:OldVillage ;
+    rpg:participatesInQuest rpg:LostRelicQuest ;
+    rpg:enemyOf rpg:DarkLord .
+
+rpg:ElderMira a rpg:NonPlayerCharacter ;
+    rpg:characterName "Elder Mira" ;
+    rpg:level 20 ;
+    rpg:hasRace rpg:Human ;
+    rpg:belongsToFaction rpg:AdventurersGuild ;
+    rpg:locatedIn rpg:OldVillage ;
+    rpg:givesQuest rpg:LostRelicQuest .
+
+rpg:GoblinWarrior a rpg:Enemy ;
+    rpg:characterName "Goblin Warrior" ;
+    rpg:level 5 ;
+    rpg:hasClass rpg:Warrior ;
+    rpg:hasRace rpg:Orc ;
+    rpg:usesWeapon rpg:IronSword ;
+    rpg:locatedIn rpg:DarkForest ;
+    rpg:enemyOf rpg:Arin .
+
+rpg:DarkLord a rpg:BossEnemy ;
+    rpg:characterName "Dark Lord" ;
+    rpg:level 40 ;
+    rpg:hasClass rpg:Mage ;
+    rpg:hasRace rpg:Human ;
+    rpg:hasSkill rpg:Fireball ;
+    rpg:belongsToFaction rpg:ShadowCult ;
+    rpg:locatedIn rpg:ShadowCastle ;
+    rpg:enemyOf rpg:Arin, rpg:Lyra .

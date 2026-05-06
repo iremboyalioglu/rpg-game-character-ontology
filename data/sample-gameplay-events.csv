@@ -1,0 +1,5 @@
+event_id,player_id,character_id,event_type,related_quest,used_skill,event_count,timestamp
+event_001,player_001,Arin,QuestCompletion,LostRelicQuest,PowerStrike,1,2026-04-20T18:30:00
+event_002,player_001,Arin,SkillUsage,LostRelicQuest,PowerStrike,7,2026-04-20T18:45:00
+event_003,player_002,Lyra,SkillUsage,ShadowGateQuest,Fireball,12,2026-04-21T20:00:00
+event_004,player_003,Kael,QuestCompletion,HerbGatheringQuest,Tracking,1,2026-04-22T17:20:00
