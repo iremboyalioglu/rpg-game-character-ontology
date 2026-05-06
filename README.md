@@ -182,6 +182,24 @@ Future iterations may include:
 - Adding more example characters, quests, factions, and locations
 - Publishing ontology documentation on GitHub Pages
 
+## Phase 2 Update
+
+In Phase 2, the ontology was extended with player behavior and ontology population-related concepts. The updated version includes new concepts such as `Player`, `GameplayEvent`, `QuestCompletion`, `SkillUsage`, `CharacterProgression`, `PlayStyle`, and `Recommendation`.
+
+The repository now includes:
+
+- Updated ontology v2 file
+- Sample data files
+- Data-to-ontology mapping documentation
+- Research integration document
+- Mandatory paper review
+- Updated SPARQL query examples
+- Updated SHACL shapes
+- SHACL validation results and validation report
+- Widoco-generated ontology documentation
+
+The Widoco documentation is available in the `widoco/` directory.
+
 ## License
 
 This project is licensed under the MIT License.
