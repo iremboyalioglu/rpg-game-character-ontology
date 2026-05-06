@@ -1,4 +1,0 @@
-quest_id,quest_title,quest_giver,required_skill,reward_item,related_location,difficulty
-quest_lost_relic,The Lost Relic,ElderMira,PowerStrike,HealingPotion,DarkForest,Medium
-quest_shadow_gate,The Shadow Gate,ElderMira,Fireball,AncientAmulet,ShadowCastle,Hard
-quest_herb_gathering,Forest Herbs,ElderMira,Tracking,ManaPotion,DarkForest,Easy
